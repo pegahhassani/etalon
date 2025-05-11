@@ -3,7 +3,205 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/styles/index.css" />
+    <title>Etalon</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header-wrapper">
+      <div class="container">
+        <section class="nav-wrapper">
+          <div class="logo">
+            <h2>Etalon</h2>
+          </div>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#" title="Home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" title="Store">Store</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" title="New">New</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" title="Contact">Contact</a>
+            </li>
+          </ul>
+          <div class="shopping-cart">
+            <img
+              src="./assets/images/fi-rr-shopping-cart.svg"
+              alt="shopping-cart" />
+          </div>
+        </section>
+        <section class="hero-wrapper">
+          <input type="radio" name="slide" id="first" checked />
+          <input type="radio" name="slide" id="second" />
+          <input type="radio" name="slide" id="third" />
+          <div class="hero-dots">
+            <div>
+              <label for="first">
+                <img
+                  src="./assets/images/fill dot.svg"
+                  alt="dot"
+                  class="first-dot-fill" />
+                <img
+                  src="./assets/images/dot.svg"
+                  alt="dot"
+                  class="first-dot" />
+              </label>
+            </div>
+            <div>
+              <label for="second">
+                <img
+                  src="./assets/images/fill dot.svg"
+                  alt="dot"
+                  class="second-dot-fill" />
+                <img
+                  src="./assets/images/dot.svg"
+                  alt="dot"
+                  class="second-dot" />
+              </label>
+            </div>
+            <div>
+              <label for="third">
+                <img
+                  src="./assets/images/fill dot.svg"
+                  alt="dot"
+                  class="third-dot-fill" />
+                <img
+                  src="./assets/images/dot.svg"
+                  alt="dot"
+                  class="third-dot" />
+              </label>
+            </div>
+          </div>
+          <div class="hero-left">
+            <p class="hero-year">2022</p>
+            <div class="text-box">
+              <h1 class="text t-autumn">Autumn Jackets</h1>
+              <h1 class="text t-winter">Winter Jackets</h1>
+              <h1 class="text t-summer">Summer T-shirts</h1>
+            </div>
+            <p class="hero-subtitle">Autumn Sale / Up to 50% OFF</p>
+            <button class="hero-btn">Open Collection</button>
+          </div>
+          <div class="hero-right">
+            <div class="hero-right--price">$299</div>
+            <div class="hero-right--discount">40% OFF</div>
+            <div class="hero-image">
+              <img
+                src="./assets/images/Ellipse-hero.png"
+                alt="-"
+                class="ellipse-01" />
+              <img
+                src="./assets/images/Ellipse-hero.png"
+                alt="-"
+                class="ellipse-02" />
+              <img src="./assets/images/man.png" alt="man" class="hero-man" />
+            </div>
+            <div class="hero-arrows">
+              <div class="prev">
+                <img
+                  src="./assets/images/arrow.svg"
+                  alt="prev"
+                  class="arrow-prev" />
+                <img
+                  src="./assets/images/arrow-hover.svg"
+                  alt="prev"
+                  class="arrow-prev" />
+              </div>
+              <div class="next">
+                <img
+                  src="./assets/images/arrow.svg"
+                  alt="next"
+                  class="arrow-next" />
+                <img
+                  src="./assets/images/arrow-hover.svg"
+                  alt="next"
+                  class="arrow-next" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </header>
+    <section class="nav">
+      <div class="container">
+        <ul class="nav-list-mob">
+          <li class="nav-item-mob">
+            <a href="#" title="call">
+              <img
+                src="./assets/images/fi-rr-phone-call.svg"
+                alt="phone call" />
+            </a>
+          </li>
+          <li class="nav-item-mob">
+            <a href="#" title="rs">
+              <img src="./assets/images/fi-rs-badge.svg" alt="rs" />
+            </a>
+          </li>
+          <li class="nav-item-mob">
+            <a href="#" title="Home">
+              <img src="./assets/images/fi-rr-home.svg" alt="Home" />
+            </a>
+          </li>
+          <li class="nav-item-mob">
+            <a href="#" title="shop">
+              <img src="./assets/images/fi-rr-shop.svg" alt="shop" />
+            </a>
+          </li>
+          <li class="nav-item-mob">
+            <a href="#" title="shopping-cart">
+              <img
+                src="./assets/images/fi-rr-shopping-cart.svg"
+                alt="shopping-cart"
+                width="24"
+                height="24" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="brands-wrapper">
+      <div class="container">
+        <ul class="brands-list">
+          <li class="brand-item">
+            <img
+              src="./assets/images/Adidas-group-logo-fr.svg"
+              alt="adidas"
+              width="41.28" />
+          </li>
+          <li class="brand-item">
+            <img
+              src="./assets/images/Prada-Logo.svg"
+              alt="prada"
+              width="64.49" />
+          </li>
+          <li class="brand-item">
+            <img src="./assets/images/Logo_NIKE.svg" alt="nike" width="28" />
+          </li>
+          <li class="brand-item">
+            <img src="./assets/images/H&M-Logo.svg" alt="h&m" width="15" />
+          </li>
+          <li class="brand-item">
+            <img
+              src="./assets/images/Gucci_Logo.svg"
+              alt="gucci"
+              width="41.58" />
+          </li>
+          <li class="brand-item">
+            <img
+              src="./assets/images/Blk_sports_logo.svg"
+              alt="blk"
+              width="36.19" />
+          </li>
+        </ul>
+      </div>
+    </section>
+  </body>
 </html>
