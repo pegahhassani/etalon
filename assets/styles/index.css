@@ -6,6 +6,8 @@
 :root {
   --bg-dark-green: #2a4032;
   --bg-light-green: #3a5e46;
+  --bg-footer-color: #3b5f47;
+  --bg-count-down-color: #18181840;
   --white-text-color: #ffffff;
   --black-text-color: #000000;
   --white-lower-opacity: #ffffff4d;
@@ -376,7 +378,11 @@ label {
 #favorite-one:checked + label,
 #favorite-two:checked + label,
 #favorite-three:checked + label,
-#favorite-four:checked + label {
+#favorite-four:checked + label,
+#favorite-five:checked + label,
+#favorite-six:checked + label,
+#favorite-seven:checked + label,
+#favorite-eight:checked + label {
   color: red;
 }
 
@@ -408,4 +414,52 @@ label {
   border-radius: var(--border-btn-radius);
   background-color: var(--btn-yellow-color);
   cursor: pointer;
+}
+
+/* footer */
+footer {
+  background-color: var(--bg-footer-color);
+  padding: 32px 0;
+}
+
+.footer-left {
+  display: none;
+}
+
+.footer-right h2 {
+  color: var(--white-text-color);
+  font-size: var(--font-size-h2-mob);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.footer-right ul {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+  font-family: "Roboto";
+}
+
+.count-down--item {
+  text-align: center;
+}
+
+.count-down--item .count-down-title {
+  width: 54px;
+  height: 56px;
+  font-weight: var(--font-bold);
+  background-color: var(--bg-count-down-color);
+  border-radius: var(--border-btn-radius);
+  padding: 12px;
+  color: var(--white-text-color);
+  font-size: var(--font-size-h3-desk);
+  margin-bottom: 14px;
+}
+
+.count-down--item .count-down-subtitle {
+  font-family: "Roboto";
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-lighter);
+  color: var(--white-text-color);
 }
