@@ -23,11 +23,11 @@
 
   --font-size-h1-desk: 112px;
   --font-size-h1-mob: 60px;
+  --font-size-footer-desk: 64px;
   --font-size-h2-desk: 48px;
   --font-size-h2-mob: 32px;
   --font-size-h3-desk: 24px;
   --font-size-h3-mob: 18px;
-  --font-size-footer-desk: 64px;
   --font-size-xxs: 12px;
   --font-size-xs: 14px;
   --font-size-sm: 16px;
@@ -89,8 +89,8 @@ input[type="radio"] {
   width: 330px;
   margin-right: auto;
   margin-left: auto;
-  overflow-x: auto;
   white-space: nowrap;
+  overflow-x: auto;
 }
 
 /* header */
@@ -115,6 +115,7 @@ header {
 .t-autumn,
 .t-winter,
 .t-summer,
+.hero-arrows-next,
 .hero-right--price,
 .hero-right--discount {
   display: none;
@@ -284,14 +285,6 @@ header {
 }
 
 @media (width >= 1350px) {
-  input[type="radio"] {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-    pointer-events: none;
-  }
-
   .container {
     width: 1320px;
   }
@@ -470,6 +463,21 @@ header {
     opacity: 1;
   }
 
+  #next01:checked ~ .hero-arrows-next label .next.next02,
+  #next02:checked ~ .hero-arrows-next label .next.next03,
+  #next03:checked ~ .hero-arrows-next label .next.next01 {
+    display: block;
+  }
+
+  #next01:checked ~ .hero-arrows-next .next01,
+  #next01:checked ~ .hero-arrows-next .next03,
+  #next02:checked ~ .hero-arrows-next .next02,
+  #next02:checked ~ .hero-arrows-next .next01,
+  #next03:checked ~ .hero-arrows-next .next03,
+  #next03:checked ~ .hero-arrows-next .next02 {
+    display: none;
+  }
+
   #next01:checked ~ .hero-left > .text-box .t-autumn,
   #next02:checked ~ .hero-left > .text-box .t-winter,
   #next03:checked ~ .hero-left > .text-box .t-summer {
@@ -479,12 +487,6 @@ header {
   #next02:checked ~ .hero-left > .text-box .t-autumn,
   #next03:checked ~ .hero-left > .text-box .t-autumn {
     display: none;
-  }
-
-  #next01:checked ~ .hero-arrows-next label .next.next02,
-  #next02:checked ~ .hero-arrows-next label .next.next03,
-  #next03:checked ~ .hero-arrows-next label .next.next01 {
-    display: block;
   }
 
   #next01:checked ~ .hero-dots label .first-dot-fill,
@@ -500,15 +502,6 @@ header {
   #next03:checked ~ .hero-dots label .third-dot,
   #next02:checked ~ .hero-dots label .first-dot-fill,
   #next03:checked ~ .hero-dots label .first-dot-fill {
-    display: none;
-  }
-
-  #next01:checked ~ .hero-arrows-next .next01,
-  #next01:checked ~ .hero-arrows-next .next03,
-  #next02:checked ~ .hero-arrows-next .next02,
-  #next02:checked ~ .hero-arrows-next .next01,
-  #next03:checked ~ .hero-arrows-next .next03,
-  #next03:checked ~ .hero-arrows-next .next02 {
     display: none;
   }
 }
@@ -541,6 +534,14 @@ header {
   padding-left: 18px;
   position: relative;
   margin-bottom: 32px;
+}
+
+.new-collection--wrapper ul li:nth-of-type(1) img {
+  width: 197.28px;
+}
+
+.new-collection--wrapper ul li:nth-of-type(2) img {
+  width: 189.66px;
 }
 
 .colorful-right h3 {
@@ -584,9 +585,66 @@ header {
   cursor: pointer;
 }
 
+@media (width >= 1350px) {
+  .new-collection--wrapper h2 {
+    font-size: var(--font-size-h2-desk);
+  }
+
+  .new-collection--wrapper ul {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .new-collection--wrapper ul li {
+    height: 550.75px;
+  }
+
+  .new-collection--wrapper ul li button:hover {
+    background-color: var(--btn-black-hover);
+  }
+
+  .new-collection--wrapper ul li h3 {
+    font-size: var(--font-size-h3-desk);
+  }
+
+  .new-collection--wrapper ul li:nth-of-type(1) {
+    flex-grow: 1;
+    margin-bottom: 0;
+    margin-top: -18px;
+  }
+
+  .new-collection--wrapper ul li:nth-of-type(2) {
+    flex-grow: 1.5;
+  }
+
+  .new-collection--wrapper ul li:nth-of-type(2) h3 {
+    max-width: 185px;
+    top: 71.87px;
+    right: 98.5px;
+  }
+
+  .new-collection--wrapper ul li:nth-of-type(2) p {
+    font-size: var(--font-size-h2-desk);
+    top: 247.38px;
+    right: 96.5px;
+  }
+
+  .new-collection--wrapper ul li:nth-of-type(1) img {
+    width: 288.66px;
+    height: 470px;
+  }
+
+  .new-collection--wrapper ul li:nth-of-type(2) img {
+    width: 455.14px;
+  }
+}
+
 /* best seller */
 .best-seller-wrapper {
   background-color: var(--best-selle-bg);
+  white-space: nowrap;
+  overflow-x: auto;
 }
 
 .best-sellers-list {
@@ -669,6 +727,59 @@ label {
   cursor: pointer;
 }
 
+.more-products {
+  display: none;
+}
+
+@media (width >= 1350px) {
+  .best-seller-wrapper {
+    overflow-x: hidden;
+  }
+
+  .best-seller-wrapper ul {
+    flex-wrap: wrap;
+    max-width: 1320px;
+    gap: 35px;
+  }
+
+  .best-seller-wrapper ul li {
+    width: calc((100% / 4) - 35px + (35px / 4));
+  }
+
+  .best-seller-wrapper ul li:nth-of-type(n + 5) {
+    display: none;
+  }
+
+  .more-products {
+    width: auto;
+    display: block;
+    padding: var(--btn-padding);
+    justify-self: center;
+    color: var(--white-text-color);
+    background-color: var(--btn-black-color);
+    text-align: center;
+    border-radius: var(--border-btn-radius);
+    margin-top: 70px;
+  }
+
+  .more-products:hover {
+    background-color: var(--btn-black-hover);
+  }
+
+  #less-products {
+    display: none;
+  }
+
+  #show-more:checked ~ ul li:nth-of-type(n + 5),
+  #show-more:checked ~ #less-products {
+    display: block;
+  }
+
+  #show-more:checked ~ #more-products {
+    display: none;
+  }
+}
+
 /* footer */
 footer {
   background-color: var(--bg-footer-color);
@@ -715,4 +826,51 @@ footer {
   font-size: var(--font-size-xxs);
   font-weight: var(--font-lighter);
   color: var(--white-text-color);
+}
+
+@media (width >= 1350px) {
+  footer {
+    background: linear-gradient(
+      to right,
+      var(--btn-yellow-color) 30%,
+      var(--bg-footer-color) 30%
+    );
+    padding: 78px 0;
+  }
+
+  .footer {
+    display: flex;
+    gap: 24px;
+  }
+
+  .footer-left {
+    display: block;
+  }
+
+  .footer-right ul {
+    gap: 48px;
+  }
+
+  .footer-left h2 {
+    font-weight: var(--font-bold);
+    font-size: var(--font-size-footer-desk);
+    margin-bottom: 32px;
+  }
+
+  .footer-right h2 {
+    margin-bottom: 93.47px;
+    text-align: left;
+    font-size: var(--font-size-footer-desk);
+  }
+
+  .footer-right .count-down-subtitle {
+    font-size: var(--font-size-h3-desk);
+  }
+
+  .count-down--item .count-down-title {
+    width: 153.5px;
+    height: 112px;
+    margin-bottom: 12px;
+    font-size: var(--font-size-footer-desk);
+  }
 }
