@@ -463,6 +463,10 @@ header {
     opacity: 1;
   }
 
+  .hero-arrows-next {
+    display: block;
+  }
+
   #next01:checked ~ .hero-arrows-next label .next.next02,
   #next02:checked ~ .hero-arrows-next label .next.next03,
   #next03:checked ~ .hero-arrows-next label .next.next01 {
